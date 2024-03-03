@@ -14,7 +14,7 @@ const Home = () => {
   }, []);
   return (
 
-      <div className="movie-container">
+      <div className="main-cntainer row">
    {
     movies.map(movie=> <SingleCard
     key={movie.id}
