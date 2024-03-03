@@ -10,7 +10,7 @@ const App = () => {
       <div className="header m-auto mb-3 m-lg-3 ">
         <Header></Header>
       </div>
-      <div className="main row">
+      <div className="main row d-flex justify-content-around">
         <div className="home-container col-md-8 ">
           <Home></Home>
         </div>
