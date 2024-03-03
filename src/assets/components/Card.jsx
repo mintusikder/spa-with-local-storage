@@ -1,12 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Home = () => {
+const Card = () => {
     return (
         <div>
-            <h2>this is home</h2>
+            <h3>dddd</h3>
         </div>
     );
 };
 
-export default Home;
+export default Card;
