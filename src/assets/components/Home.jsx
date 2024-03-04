@@ -4,7 +4,7 @@ import SingleCard from "./SingleCard";
 
 // import React from 'react';
 
-const Home = () => {
+const Home = ({handelWatchTime}) => {
     const [movies , setMovies] = useState([])
   useEffect(() => {
     fetch("data.json")
@@ -19,6 +19,7 @@ const Home = () => {
     movies.map(movie=> <SingleCard
     key={movie.id}
     movie={movie}
+    handelWatchTime={handelWatchTime}
     ></SingleCard>)
    }
       </div>

@@ -1,8 +1,8 @@
 import React from "react";
 
 const SingleCard = (props) => {
-  console.log(props);
   const { poster, movieName, description, watchTime, imdbRating } = props.movie;
+  const {handelWatchTime} = props
   return (
     <div>
       <div className="movie-card card p-4 text-center w-100 m-auto col-md-6 ">
@@ -15,7 +15,7 @@ const SingleCard = (props) => {
           <p>Watch Time : {watchTime}</p>
           <p>Rating : {imdbRating}</p>
         </div>
-        <button className="btn btn-info w-75 ">Book Now</button>
+        <button onClick={()=> handelWatchTime(watchTime)} className="btn btn-info w-75 ">Book Now</button>
       </div>
     </div>
   );
