@@ -1,7 +1,7 @@
 // import React from 'react';
 
 import { useEffect, useState } from "react";
-
+import { ToastContainer, toast } from 'react-toastify';
 const SideCard = ({ watchTime }) => {
 //   console.log(watchTime);
 const [time , setTime] = useState(watchTime)
@@ -18,6 +18,10 @@ const [breakTime, setBreakTime] = useState(0)
     localStorage.setItem("breakTime", bt)
     setBreakTime(bt)
   } 
+
+  const handelAddToCard =() =>{
+    toast("Wow so easy!")
+  }
   return (
     <div>
       <h1>My Cart</h1>
@@ -31,7 +35,7 @@ const [breakTime, setBreakTime] = useState(0)
       <button className="w-25 btn-circle bg-warning btn btn-info">20</button>
       <button className="w-25 btn-circle m-1 bg-danger btn btn-info">25</button>
       <input type="text" value={breakTime} disabled />
-      <button className="mt-5 btn btn-info w-100">Complete</button>
+      <button onClick={handelAddToCard} className="mt-5 btn btn-info w-100">Complete</button>
     </div>
   );
 };

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 import Header from "./assets/components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./assets/components/Home";
@@ -30,6 +32,7 @@ const App = () => {
           <SideCard watchTime={watchTime}></SideCard>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
